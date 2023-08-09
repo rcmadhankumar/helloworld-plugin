@@ -2,6 +2,7 @@ package main
 
 import (
 	"os"
+	"fmt"
 	"helloworld-plugin/pkg/commands"
 	"github.com/vmware-tanzu/tanzu-plugin-runtime/config/types"
 	"github.com/vmware-tanzu/tanzu-plugin-runtime/log"
@@ -10,12 +11,12 @@ import (
 )
 
 var descriptor = plugin.PluginDescriptor{
-	Name:        "helloworld-plugin",
+	Name:        "helloworldplugin",
 	Description: "tanzu cli plugin for hello world app.",
-	Target:      types.TargetGlobal, // <<<FIXME! set the Target of the plugin to one of {TargetGlobal,TargetK8s,TargetTMC}
+	Target:      types.TargetK8s,
 	Version:     buildinfo.Version,
 	BuildSHA:    buildinfo.SHA,
-	Group:       plugin.ManageCmdGroup, // set group
+	Group:       plugin.RunCmdGroup,
 }
 
 func main() {
@@ -23,11 +24,12 @@ func main() {
 	if err != nil {
 		log.Fatal(err, "")
 	}
-	// fmt.Println("Hello world application plugin!")
+	fmt.Println("Hello world application plugin!")
 	p.AddCommands(
-		commands.testCmd,
+		commands.TestCmd,
+		// commands.testCmd,
 	)
 	if err := p.Execute(); err != nil {
-		os.Exit(1)
+		os.Exit(0)
 	}
 }

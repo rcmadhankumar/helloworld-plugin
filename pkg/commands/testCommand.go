@@ -12,11 +12,11 @@ import (
 
 var repoOp = packagedatamodel.NewRepositoryOptions()
 
-var testCmd = &cobra.Command{
+var TestCmd = &cobra.Command{
 	Use:               "test command",
 	Short:             "Repository operations",
 	Args:  cobra.NoArgs,
-	Long:              `Add, list, get or delete a package repository for Tanzu packages. A package repository is a collection of packages that are grouped together into an imgpkg bundle.`,
+	Long:              `Nothing`,
 	RunE: testHelloworld,
 	SilenceUsage: true,
 }
