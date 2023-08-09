@@ -23,9 +23,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err, "")
 	}
-	fmt.Println("Hello world application plugin!")
+	// fmt.Println("Hello world application plugin!")
 	p.AddCommands(
-	// Add commands
 	)
 	if err := p.Execute(); err != nil {
 		os.Exit(1)
