@@ -27,4 +27,5 @@ func init() {
 
 func testHelloworld(cmd *cobra.Command, _ []string) error{
 	fmt.Println("Hello world!")
+	return nil
 }

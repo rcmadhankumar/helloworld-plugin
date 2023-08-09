@@ -2,7 +2,6 @@ package main
 
 import (
 	"os"
-    "fmt"
 	"helloworld-plugin/pkg/commands"
 	"github.com/vmware-tanzu/tanzu-plugin-runtime/config/types"
 	"github.com/vmware-tanzu/tanzu-plugin-runtime/log"
@@ -26,7 +25,7 @@ func main() {
 	}
 	// fmt.Println("Hello world application plugin!")
 	p.AddCommands(
-		commands.testCmd
+		commands.testCmd,
 	)
 	if err := p.Execute(); err != nil {
 		os.Exit(1)
