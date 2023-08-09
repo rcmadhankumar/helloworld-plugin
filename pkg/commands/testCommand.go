@@ -5,6 +5,7 @@ package commands
 
 import (
 	"github.com/spf13/cobra"
+	"fmt"
 
 	"github.com/vmware-tanzu/tanzu-framework/packageclients/pkg/packagedatamodel"
 )
