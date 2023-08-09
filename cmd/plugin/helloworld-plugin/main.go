@@ -2,7 +2,7 @@ package main
 
 import (
 	"os"
-
+    "fmt"
 	"github.com/vmware-tanzu/tanzu-plugin-runtime/config/types"
 	"github.com/vmware-tanzu/tanzu-plugin-runtime/log"
 	"github.com/vmware-tanzu/tanzu-plugin-runtime/plugin"
